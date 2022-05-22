@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/icloud/static/css/main.edefc993.css",
-    "main.js": "/icloud/static/js/main.fa4a664a.js",
+    "main.js": "/icloud/static/js/main.fffd5f65.js",
     "static/media/bg.png": "/icloud/static/media/bg.178e240b025a13a0101f.png",
     "index.html": "/icloud/index.html",
     "main.edefc993.css.map": "/icloud/static/css/main.edefc993.css.map",
-    "main.fa4a664a.js.map": "/icloud/static/js/main.fa4a664a.js.map"
+    "main.fffd5f65.js.map": "/icloud/static/js/main.fffd5f65.js.map"
   },
   "entrypoints": [
     "static/css/main.edefc993.css",
-    "static/js/main.fa4a664a.js"
+    "static/js/main.fffd5f65.js"
   ]
 }
