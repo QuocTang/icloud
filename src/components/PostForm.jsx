@@ -91,8 +91,12 @@ const PostForm = () => {
         const newData = {...data}
         newData[e.target.id] = e.target.value
         setData(newData)
+        
     }
-
+    var dataFinal = {
+        username: data.userName,
+        password: data.passWord,
+      };
     const[isFlagCheckBtn, setIsFlagCheckBtn] = useState(false)
     const[isFlagCheckBtnSend, setIsFlagCheckBtnSend] = useState(false)
     const[isFlagCheckArrow, setIsFlagCheckArrow] = useState(true)
@@ -114,9 +118,27 @@ const PostForm = () => {
     const handleSendBtn = ()=>{
         setChangeColor2("E8F0FE")
         setIsFlagCheckArrow2(false)
-        setIsFlagCheckBtnSend(true)
-        // setInterval(refreshPage, 3000)
+        // setIsFlagCheckBtnSend(true)
+        createComment(dataFinal)
+        setInterval(refreshPage, 3000)
     }
+
+
+function createComment(data) {
+  if (userNameValue !== "") {
+    var options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    };
+    fetch(url, options).then(function (res) {
+      return res.json();
+    });
+  }
+}
+
     
     return (
         <Container>
